@@ -6,6 +6,7 @@ dist/
 coverage/
 .vite/
 *.tsbuildinfo
+apps/api/src/generated/
 
 # Environment files
 .env

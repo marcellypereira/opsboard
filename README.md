@@ -43,6 +43,19 @@ O front-end e o back-end ficam juntos porque formam um único produto. Eles aind
 - React Hook Form + Zod
 - Vitest, Testing Library e Playwright
 
+## Banco de dados local
+
+O PostgreSQL de desenvolvimento roda em Docker e usa a porta local `5435`, para não disputar a porta padrão com outros projetos.
+
+```bash
+nvm use
+npm install
+npm run db:up
+npm run db:migrate --workspace=@opsboard/api -- --name nome-da-migracao
+```
+
+Para encerrar o banco local, use `npm run db:down`. Os dados ficam no volume Docker `opsboard-postgres-data` e sobrevivem à parada do container.
+
 ## Etapa atual
 
 Fundação do repositório e definição de arquitetura.
